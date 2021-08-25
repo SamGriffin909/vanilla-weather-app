@@ -82,3 +82,9 @@ a {
 .WeatherInfo .temperature-container {
   margin-top: 30px;
 }
+
+.Weather form {
+  margin-top: 40px;
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 30px;
+}
