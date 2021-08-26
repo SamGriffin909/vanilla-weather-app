@@ -35,7 +35,6 @@
                 type="search"
                 placeholder="Enter a city.."
                 class="form-control search-input"
-              
               />
             </div>
             <div class="col-3 p-0">
@@ -43,6 +42,7 @@
                 type="submit"
                 class="btn btn-primary w-100"
                 value="Search"
+                id="search-city-button"
               />
             </div>
           </div>
@@ -50,12 +50,15 @@
         <div class="WeatherInfo">
           <div class="row">
             <div class="col-6">
-              <h1>Dublin</h1>
+              <h1 id="city-name">Dublin</h1>
               <ul>
-                <li><span>Wednesday 20:57</span>, scattered clouds</li>
                 <li>
-                  Humidity: <strong>47%</strong>, Wind:
-                  <strong>0.45km/h</strong>
+                  <span id="city-date"> Wednesday 20:57 </span>,
+                  <span id="city-description"> scattered clouds </span>
+                </li>
+                <li>
+                  <span id="city-humidity"> Humidity: <strong>47%</strong> </span>,
+                  <span id="city-windspeed"> Wind: <strong>0.45km/h</strong> </span>
                 </li>
               </ul>
             </div>
