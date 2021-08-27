@@ -10,7 +10,7 @@ function formatDate(timestamp) {
     minutes = `0${minutes}`;
   }
 
-  let dayIndex = now.getDay();
+  let dayIndex = date.getDay();
   let days = [
     "Sunday",
     "Monday",
@@ -41,7 +41,7 @@ cityElement.innerHTML = response.data.name;
 descriptionElement.innerHTML = response.data.weather[0].description;
 humidityElement.innerHTML = `Humidity: ${response.data.main.humidity} %`;
 windElement.innerHTML = `WindSpeend: ${Math.round(response.data.wind.speed)}`;
-dateElement.innerHTML = formateDate(response.data.dt*1000);
+dateElement.innerHTML = formatDate(response.data.dt*1000);
 iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute("alt",`http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`);
 }
