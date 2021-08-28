@@ -27,7 +27,8 @@ function formatDate(timestamp) {
 
 //dynamic HTML using Javascript
 
-function displayForecast(){
+function displayForecast(response){
+  console.log(response.data.daily);
   let forecastElement=document.querySelector("#weather-forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -55,6 +56,14 @@ forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML= forecastHTML;
 }
 
+function getForecast(coordinates){
+  console.log(coordinates);
+  let apikey = "5efeb759a9a2d75776085db8550371e8";
+  let apiUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apikey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayTemperature(response){
 let temperatureElement = document.querySelector("#city-temperature");
 let cityElement = document.querySelector("#city-name");
@@ -76,6 +85,8 @@ windElement.innerHTML = Math.round(response.data.wind.speed);
 dateElement.innerHTML = formatDate(response.data.dt*1000);
 iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute("alt",`http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`);
+
+getForecast(response.data.coord);
 }
 
 function search(city){
@@ -126,5 +137,4 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-displayForecast();
 search("New York");
