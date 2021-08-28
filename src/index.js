@@ -31,6 +31,7 @@ let cityElement = document.querySelector("#city-name");
 let descriptionElement = document.querySelector("#city-description")
 let humidityElement = document.querySelector("#city-humidity");
 let windElement = document.querySelector("#city-windspeed");
+//let precipitationElement = document.querySelector("#city-precipitation");
 let dateElement = document.querySelector("#city-date");
 let iconElement = document.querySelector("#icon");
 
@@ -41,6 +42,7 @@ cityElement.innerHTML = response.data.name;
 descriptionElement.innerHTML = response.data.weather[0].description;
 humidityElement.innerHTML = response.data.main.humidity;
 windElement.innerHTML = Math.round(response.data.wind.speed);
+//precipitationElement.innerHTML = response.data.rain[`1h`];
 dateElement.innerHTML = formatDate(response.data.dt*1000);
 iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute("alt",`http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`);
