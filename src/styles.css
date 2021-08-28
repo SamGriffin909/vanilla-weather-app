@@ -8,6 +8,10 @@ footer {
 a {
   text-decoration: none;
 }
+icon {
+  width: 52px;
+  height: 60px;
+}
 
 .Weather {
   font-family: "Raleway", sans-serif;
@@ -50,19 +54,6 @@ a {
   line-height: 1;
 }
 
-.Weather .unit {
-  color: #212121;
-  font-size: 28px;
-  line-height: 36px;
-  font-weight: 400;
-  position: relative;
-  line-height: 1;
-  top: -34px;
-}
-#temp-box {
-  width: 200px;
-}
-
 .Weather .search-input {
   background: #f9f7fe;
   border: none;
@@ -94,7 +85,21 @@ a {
   padding-bottom: 30px;
 }
 
-icon {
-  width: 52px;
-  height: 60px;
+.Weather .unit {
+  color: #212121;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 400;
+  position: relative;
+  line-height: 1;
+  top: -34px;
+}
+
+.Weather .active {
+  color: #212121;
+  cursor: default;
+}
+
+.Weather .active:hover {
+  text-decoration: none;
 }
