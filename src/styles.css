@@ -38,8 +38,9 @@ h1 {
   list-style: none;
 }
 
-.Weather .beach {
+.Weather .coder {
   max-width: 150px;
+  max-height: 150px;
   display: block;
 }
 
