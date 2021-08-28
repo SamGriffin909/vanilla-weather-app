@@ -13,6 +13,9 @@ icon {
   height: 60px;
 }
 
+h1 {
+  padding-left: 28px;
+}
 .Weather {
   font-family: "Raleway", sans-serif;
   background: #fff;
