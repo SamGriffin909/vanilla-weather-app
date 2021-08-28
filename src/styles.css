@@ -59,6 +59,9 @@ a {
   line-height: 1;
   top: -34px;
 }
+#temp-box {
+  width: 200px;
+}
 
 .Weather .search-input {
   background: #f9f7fe;
