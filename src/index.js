@@ -22,7 +22,7 @@ function formatDate(timestamp) {
   ];
   let day = days[dayIndex];
 
-  return `${day} ${hours}:${minutes}`;
+  return `Last Updated at ${day} ${hours}:${minutes}`;
 }
 
 //let dateElement = document.querySelector("#city-date");
@@ -36,14 +36,16 @@ let humidityElement = document.querySelector("#city-humidity");
 let windElement = document.querySelector("#city-windspeed");
 let dateElement = document.querySelector("#city-date");
 let iconElement = document.querySelector("#icon");
+let precipitationElement = document.querySelector("#city-precipitation");
 temperatureElement.innerHTML = Math.round(response.data.main.temp);
 cityElement.innerHTML = response.data.name;
 descriptionElement.innerHTML = response.data.weather[0].description;
-humidityElement.innerHTML = `Humidity: ${response.data.main.humidity} %`;
-windElement.innerHTML = `WindSpeend: ${Math.round(response.data.wind.speed)}`;
+humidityElement.innerHTML = response.data.main.humidity;
+windElement.innerHTML = Math.round(response.data.wind.speed);
 dateElement.innerHTML = formatDate(response.data.dt*1000);
 iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute("alt",`http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`);
+precipitationElement.innerHTML = Math.round (response.data.precipitation.value);
 }
 
 let city = "New York"

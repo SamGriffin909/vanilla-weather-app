@@ -54,19 +54,18 @@
               <ul>
                 <li>
                   <span id="city-date"> Wednesday 20:57 </span>,
-                  <span id="city-description"> scattered clouds </span>
+                  <div id="city-description"> scattered clouds </div>
                 </li>
                 <li>
-                  <span id="city-humidity"> Humidity: <strong>47%</strong> </span>,
-                  <span id="city-windspeed"> Wind: <strong>0.45km/h</strong> </span>
+                  Humidity: <strong> <span id="city-humidity"> </span> % </strong> <br/>
+                  Wind Speed: <strong> <span id="city-windspeed"> 0.45 </span> km/h </strong>
                 </li>
               </ul>
             </div>
             <div class="col-6">
               <div class="Weather">
                <div class="temperature-container d-flex justify-content-end">
-                <canvas width="52" height="52"> </canvas>
-                 <img src=".." 
+                <img src=".." 
                 alt="clear" 
                 class="float-left"
                 id ="icon"
@@ -79,6 +78,7 @@
             </div>
           </div>
       </div>
+      </div>
       <footer>
         <p id="code-source-link">
           <a href="https://github.com/SamGriffin909/vanilla-weather-app">
@@ -88,6 +88,6 @@
         </p>
       </footer>
     </body>
-    <script src="src/index.js"></script>
+  <script src="src/index.js"></script>
   </div>
 </html>

@@ -13,8 +13,8 @@ a {
   font-family: "Raleway", sans-serif;
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
-  padding: 40px;
+  box-shadow: 0 10px 10px rgb(65 50 100 / 8%);
+  padding: 10px;
   color: #878787;
   max-width: 500px;
   margin: 30px, auto;
@@ -87,4 +87,9 @@ a {
   margin-top: 40px;
   border-bottom: 1px solid #f9f7fe;
   padding-bottom: 30px;
+}
+
+icon {
+  width: 52px;
+  height: 60px;
 }
