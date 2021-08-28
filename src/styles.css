@@ -122,6 +122,7 @@ h1 {
 
 #high-temp {
   color: #00bfa6;
+  font-weight: 800;
 }
 #low-temp {
   opacity: 0.5;
